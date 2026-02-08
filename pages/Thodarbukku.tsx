@@ -87,13 +87,23 @@ const Thodarbukku: React.FC = () => {
           className="space-y-8"
         >
           <div className="relative group">
-            {/* Map Placeholder UI */}
             <div className="bg-slate-200 aspect-video lg:aspect-square rounded-[3rem] overflow-hidden relative shadow-2xl border-4 border-white">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200')] bg-cover bg-center grayscale opacity-30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white p-6 rounded-3xl shadow-2xl max-w-sm border border-slate-100">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white">
+              <iframe
+                title="Agamudaiyar Matrimony Location"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight={0}
+                marginWidth={0}
+                src="https://maps.google.com/maps?q=Pattukkottai%20Bus%20Stand%20Rd,%20Nadimuthu%20Nagar,%20Pattukkottai&t=k&z=17&ie=UTF8&iwloc=&output=embed"
+                className="transition-all duration-700"
+              ></iframe>
+
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/20">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white shrink-0 shadow-lg shadow-red-500/20">
                       <svg
                         className="w-6 h-6"
                         fill="currentColor"
@@ -107,31 +117,31 @@ const Thodarbukku: React.FC = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900">
-                        Kamatchi Mess
+                      <h3 className="font-black text-slate-900 leading-tight">
+                        Agamudaiyar Matrimony
                       </h3>
-                      <p className="text-xs text-slate-500">
-                        Nadimuthu Nagar, Pattukkottai
+                      <p className="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">
+                        Bus Stand Rd, Nadimuthu Nagar
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="flex text-yellow-400">
-                      {"★★★★☆".split("").map((s, i) => (
-                        <span key={i}>{s}</span>
-                      ))}
-                    </div>
-                    <span className="text-xs font-bold text-slate-600">
-                      4.1 (932 reviews)
-                    </span>
-                  </div>
                   <div className="grid grid-cols-2 gap-3">
-                    <button className="py-3 bg-blue-600 text-white text-sm font-bold rounded-xl hover:bg-blue-700 transition-colors">
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=Pattukkottai+Bus+Stand+Rd,+Nadimuthu+Nagar,+Pattukkottai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-3 bg-[#800000] text-white text-sm font-bold rounded-xl hover:bg-maroon-900 transition-all text-center flex items-center justify-center"
+                    >
                       Directions
-                    </button>
-                    <button className="py-3 border border-slate-200 text-slate-700 text-sm font-bold rounded-xl hover:bg-slate-50 transition-colors">
-                      View larger map
-                    </button>
+                    </a>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Pattukkottai+Bus+Stand+Rd,+Nadimuthu+Nagar,+Pattukkottai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-3 border border-slate-200 text-slate-700 text-sm font-bold rounded-xl hover:bg-slate-50 transition-all text-center flex items-center justify-center"
+                    >
+                      View large map
+                    </a>
                   </div>
                 </div>
               </div>
@@ -139,9 +149,11 @@ const Thodarbukku: React.FC = () => {
           </div>
 
           <div className="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-xl flex items-center gap-6">
-            <div className="w-20 h-20 bg-[#800000] rounded-3xl flex items-center justify-center text-[#D4AF37] font-bold text-3xl shadow-lg">
-              A
-            </div>
+            <img
+              src="/logo.png"
+              alt="Brand Logo"
+              className="w-20 h-20 object-contain"
+            />
             <div>
               <h4 className="text-xl font-black text-slate-900 uppercase">
                 AGAMUDAIYAR

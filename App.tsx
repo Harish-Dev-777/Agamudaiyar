@@ -20,6 +20,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminAddMember from "./pages/AdminAddMember";
 import { initialMembers, Member } from "./data/members";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App: React.FC = () => {
   const [members, setMembers] = useState<Member[]>(() => {
@@ -59,6 +60,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col font-sans selection:bg-[#800000] selection:text-white bg-white">
         <Header />
         <main className="flex-grow">

@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Inter", "Mukta Malar", sans-serif;
+}
+
+.font-tamil {
+  font-family: "Mukta Malar", sans-serif;
+}
